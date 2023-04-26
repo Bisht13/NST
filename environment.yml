@@ -1,0 +1,13 @@
+name: pytorch-nst
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - python
+  - pip
+  - matplotlib
+  - pytorch
+  - torchvision
+  - pip:
+    - numpy
+    - opencv-python
