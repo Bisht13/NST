@@ -139,18 +139,12 @@ def reconstruct_image_from_representation(config):
 
 
 if __name__ == "__main__":
-    #
-    # fixed args - don't change these unless you have a good reason (default img locations and img dump format)
-    #
     default_resource_dir = os.path.join(os.path.dirname(__file__), 'data')
     content_images_dir = os.path.join(default_resource_dir, 'content-images')
     style_images_dir = os.path.join(default_resource_dir, 'style-images')
     output_img_dir = os.path.join(default_resource_dir, 'output-images')
     img_format = (4, '.jpg')  # saves images in the format: %04d.jpg
 
-    #
-    # modifiable args - feel free to play with these (only small subset is exposed by design to avoid cluttering)
-    #
     parser = argparse.ArgumentParser()
     parser.add_argument("--should_reconstruct_content", type=bool, help="pick between content or style image reconstruction", default=True)
     parser.add_argument("--should_visualize_representation", type=bool, help="visualize feature maps or Gram matrices", default=False)
